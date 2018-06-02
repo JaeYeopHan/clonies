@@ -1,0 +1,18 @@
+{
+  "name": "clonies",
+  "version": "1.0.0",
+  "description": "Clone a well-known TypeScript or JavaScript library. The purpose of this behavior is to understand the library in greater depth.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["typescript", "clone-project"],
+  "author": "jbee",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^23.0.0",
+    "jest": "^23.1.0",
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.9.1"
+  }
+}
