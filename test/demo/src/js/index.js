@@ -1,8 +1,12 @@
-import { createStore } from "../../../../packages/redux";
+import { createStore, combineReducers } from "../../../../packages/redux";
 import { plusCount, minusCount } from "./action.js/countAction";
-import { countReducer } from "./reducers";
+import { countReducer, reposReducer } from "./reducers";
 
-const store = createStore(countReducer);
+const reducer = combineReducers({
+	count: countReducer,
+	reposReducer,
+});
+const store = createStore(reducer);
 
 const numberElm = document.getElementById("number");
 
@@ -18,7 +22,7 @@ function attachEvent() {
 function render(state) {
 	const { count } = state;
 
-	numberElm.innerText = count;
+	numberElm.innerText = count.count;
 }
 
 (() => {

@@ -1,1 +1,4 @@
-export { countReducer } from "./countReducer";
+import { countReducer } from "./countReducer";
+import { reposReducer } from "./reposReducer";
+
+export { countReducer, reposReducer };
