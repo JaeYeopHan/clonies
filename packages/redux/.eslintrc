@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "eslint-config-naver",
+    "prettier"
+  ],
+  "rules": {
+    "import/prefer-default-export": false
+  }
+}

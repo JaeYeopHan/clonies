@@ -1,0 +1,26 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "ie >= 8",
+          "iOS >= 9",
+          "Android >= 4"
+        ]
+      },
+      "loose": true,
+      "modules": false,
+      "useBuiltIns": false,
+      "include": [],
+      "exclude": [
+        "transform-regenerator",
+        "transform-async-to-generator"
+      ]
+    }]
+  ],
+  "plugins": [
+    "external-helpers",
+    "transform-es3-property-literals",
+    "transform-es3-member-expression-literals"
+  ]
+}
