@@ -1,4 +1,4 @@
 export {
-	createStore,
+	createStore
 }
-from "./redux";
+from "./createStore";
