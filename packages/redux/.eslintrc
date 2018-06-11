@@ -4,6 +4,8 @@
     "prettier"
   ],
   "rules": {
-    "import/prefer-default-export": false
+    "import/prefer-default-export": false,
+    "no-param-reassign": 0,
+    "no-shadow": 0
   }
 }
