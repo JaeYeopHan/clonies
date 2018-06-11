@@ -54,6 +54,7 @@ export function createStore(reducer, preloadedState, enhancer) {
 	function dispatch(action) {
 		currentState = reducer(currentState, action);
 		listeners.forEach(l => l());
+		return action;
 	}
 
 	/**
