@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "eslint-config-naver",
+    "prettier"
+  ],
+  "rules": {
+    "import/prefer-default-export": false,
+    "no-param-reassign": 0,
+    "no-shadow": 0
+  },
+  "globals": {
+    "nhn": true
+  }
+}
