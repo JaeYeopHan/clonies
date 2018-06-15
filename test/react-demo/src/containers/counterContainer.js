@@ -1,17 +1,18 @@
 import React, { Component, Fragment } from 'react';
-import { Button } from '../components/button';
-import { Counter } from '../components/counter';
+import { Button } from '../components/Button';
+import { Counter } from '../components/Counter';
 
-class counterContainer extends Component {
+class CounterContainer extends Component {
   render() {
     return (
-      <Fragment>
+      <div align="center">
+        <h1>React Demo</h1>
         <Button content={`+`} />
         <Counter number={0} />
         <Button content={`-`} />
-      </Fragment>
+      </div>
     );
   }
 }
 
-export default counterContainer;
+export default CounterContainer;
