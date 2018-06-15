@@ -1,6 +1,4 @@
-import {
-	compose
-} from "./compose";
+import { compose } from "./compose";
 
 /**
  * Each middleware will be given the `dispatch` and `getState` api as named arguments.
@@ -21,7 +19,7 @@ export function applyMiddleware(...middlewares) {
 		const middlewareAPI = {
 			getState: store.getState,
 			dispatch: (...args) => dispatch(...args),
-		}
+		};
 
 		// Array of function applied middleware
 		const chain = middlewares.map(middleware => middleware(middlewareAPI));
@@ -30,12 +28,12 @@ export function applyMiddleware(...middlewares) {
 		dispatch = compose(...chain)(store.dispatch);
 
 		return Object.assign({}, store, {
-			dispatch
+			dispatch,
 		});
 		// Like this:
 		// return {
 		// 	...store,
 		// 	dispatch,
 		// }
-	}
+	};
 }

@@ -3,11 +3,10 @@
 // This api return `store` or enhanced `store`.
 // This `store` support some api for managing state of application.
 export function createStore(reducer, preloadedState, enhancer) {
-
 	// * [Prevent Code]
 	// If developer using redux, pass directly enhancer without preloadState,
 	// assign preloadState to enhancer and change preloadState to undefined.
-	if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
+	if (typeof preloadedState === "function" && typeof enhancer === "undefined") {
 		enhancer = preloadedState;
 		preloadedState = undefined;
 	}
@@ -15,21 +14,21 @@ export function createStore(reducer, preloadedState, enhancer) {
 	// * [Prevent Code]
 	// If developer using redux, pass enhancer function to createStore api,
 	// return value applied enhancer function.
-	if (typeof enhancer !== 'undefined' && typeof enhancer === 'function') {
+	if (typeof enhancer !== "undefined" && typeof enhancer === "function") {
 		return enhancer(createStore)(reducer, preloadedState);
 	}
 
 	// * [Prevent Code]
 	// reducer parameter must be function type.
-	if (typeof reducer !== 'function') {
-		throw new Error('Parameter reducer must function type');
+	if (typeof reducer !== "function") {
+		throw new Error("Parameter reducer must function type");
 	}
 
 	// This is store for save application state.
 	// Get initial state from each reducer.
 	// Maybe @param reducer is reducer derived from combineReducer.
 	let currentState = reducer(preloadedState, {
-		type: "@@init"
+		type: "@@init",
 	});
 
 	// Redux manage function to modify state called listeners.
@@ -69,12 +68,12 @@ export function createStore(reducer, preloadedState, enhancer) {
 
 		return () => {
 			listeners = listeners.filter(l => l !== listener);
-		}
+		};
 	}
 
 	return {
 		dispatch,
 		getState,
 		subscribe,
-	}
+	};
 }

@@ -4,9 +4,7 @@
  * @returns {Function}
  */
 export function logger(middlewareAPI) {
-	const {
-		getState
-	} = middlewareAPI;
+	const { getState } = middlewareAPI;
 
 	return next => action => {
 		// When applied middleware, dispatch of store executed in here.

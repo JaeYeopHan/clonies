@@ -32,5 +32,5 @@ export function combineReducers(reducers) {
 		});
 
 		return hasChanged ? nextState : state;
-	}
+	};
 }
