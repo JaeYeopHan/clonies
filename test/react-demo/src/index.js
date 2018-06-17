@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from '../../../packages/redux/src/index';
+import {
+  createStore,
+  combineReducers,
+} from '../../../packages/redux/src/index';
 
 import App from './App';
+import countReducer from './reducers/countReducer';
 
-const store = createStore(() => {});
+const reducer = combineReducers({
+  count: countReducer,
+});
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(reducer);
+
+ReactDOM.render(<App store={store} />, document.getElementById('root'));

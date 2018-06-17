@@ -1,3 +1,3 @@
 import React from 'react';
 
-export const Counter = ({ number }) => <span>{number}</span>;
+export const Counter = ({ count }) => <span>{count.number}</span>;
