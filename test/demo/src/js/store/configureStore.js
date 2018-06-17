@@ -4,7 +4,7 @@ import { countReducer, reposReducer } from "../reducers";
 
 const reducer = combineReducers({
 	count: countReducer,
-	reposReducer,
+	repos: reposReducer,
 });
 
 export default function configureStore() {

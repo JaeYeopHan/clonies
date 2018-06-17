@@ -4,7 +4,7 @@ const initialState = {
 	number: 0,
 };
 
-export const countReducer = (state = initialState, action) => {
+export default function countReducer(state = initialState, action) {
 	switch (action.type) {
 		case PLUS_COUNT:
 			return Object.assign({}, state, {
@@ -17,4 +17,4 @@ export const countReducer = (state = initialState, action) => {
 		default:
 			return state;
 	}
-};
+}

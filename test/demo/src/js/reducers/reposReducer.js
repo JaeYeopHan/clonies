@@ -5,11 +5,11 @@ const initialState = {
 };
 
 // Temporary reducer
-export const reposReducer = (state = initialState, action) => {
+export default function reposReducer(state = initialState, action) {
 	switch (action.type) {
 		case FETCH_SUCCESS:
 			return state;
 		default:
 			return state;
 	}
-};
+}
