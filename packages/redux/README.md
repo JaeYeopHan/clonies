@@ -1,20 +1,15 @@
-# redux
+# Redux (cloned)
+- Clone [Redux](https://github.com/reduxjs/redux) from scratch.
 
-## Description
-- `webpack` 개발 환경
-- 이 프로젝트는 `es6+` 코드로 작성되었습니다.
+I added comments that I personally understand. Comments added can be found in each file.
 
-## 데모 페이지
-[데모 페이지 링크](./dist/index.html)
+```
+src
+├── applyMiddleware.js
+├── combineReducers.js
+├── compose.js
+├── createStore.js
+└── index.js
 
-## Browser Support
-| Android | iOS Safari | Chrome | Opera | FireFox |
-| ------- | ---------- | ------ | ----- | ------- |
-| 4.0+    | 9.0+       | 최신    | 최신   | 최신     |
-
-## Contact
-- jbee.han (jbee.han@navercorp.com)
-
-## Changelog
-### v0.1.0
-* 프로젝트 생성
+0 directories, 5 files
+```
