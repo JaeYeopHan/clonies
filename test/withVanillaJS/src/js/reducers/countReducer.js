@@ -1,4 +1,4 @@
-import { PLUS_COUNT, MINUS_COUNT } from "../action.js/actionType";
+import { PLUS_COUNT, MINUS_COUNT } from "../actions/actionType";
 
 const initialState = {
 	number: 0,

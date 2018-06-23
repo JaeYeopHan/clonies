@@ -1,4 +1,4 @@
-import { FETCH_SUCCESS } from "../action.js/actionType";
+import { FETCH_SUCCESS } from "../actions/actionType";
 
 const initialState = {
 	repos: [],
